@@ -30,14 +30,45 @@
 
         <section id="home">
             <div class="container">
-                <p>Creative Yoo SeungBeom</p>
-                <p>PORTFOLIO <br> VOL.1</p>
-                <h1>BACK-END</h1>
+                <h1>Web Developer</h1>
+                <span class="text"></span>
             </div>
         </section>
 
         <section id="aboutme">
-            <p>About me</p>
+            <div class="content_left">
+                <h2>About me</h2>
+                <img src="/assets/image/sky.jpg">
+                <div class="about_bg"></div>
+            </div>
+
+            <div class="content_right">
+                <div class="profile">
+                    <ul>
+                        <li>이름 : 유승범</li>
+                        <li> 나이 : 25세</li>
+                        <li> 주소지 : 서울특별시 마포구</li>
+                        <li> 연락처 : 010-5012-2884</li>
+                        <li> 이메일 : dbtmdqja207@naver.com</li>
+                        <li> 수료 내역 : 2021.4 - 2021.10 강남 하이미디어 아카데미</li>
+                        <li>풀스택(프론트앤드&백앤드) 개발자 양성과정 수료 (6개월)</li>
+                    </ul>
+                </div>
+
+                <div class="tag">
+                    <ul class="clearfix">
+                        <li>#신입</li>
+                        <li>#웹개발자</li>
+                        <li>#풀스택</li>
+                        <li>#프론트앤드</li>
+                        <li>#백앤드</li>
+                        <li>#어플리케이션</li>
+                        <li>#긍정적</li>
+                        <li>#열정</li>
+                    </ul>
+
+                </div>
+            </div>
         </section>
 
         <section id="skills">
@@ -56,10 +87,47 @@
 </body>
 
 <script>
-    $(".navbar li a").on("click", function() {
-        $(".navbar li").removeClass();
-        $(this).parent().addClass("on");
+    /*** 글자 타이핑 ***/
+    const content = "YOO SEUNGBEOM";
+    const text = document.querySelector(".text");
+    let i = 0;
+
+    function typing() {
+        if (i < content.length) {
+            let txt = content.charAt(i);
+            text.innerHTML += txt;
+            i++;
+        }
+    }
+    setInterval(typing, 200)
+
+    /*** 네이게이션 눌렀을 때 ***/
+    window.onload = function () {
+        var a, b = $(".navbar"),
+            c = b.outerHeight() + 15,
+            d = b.find("a"),
+            e = d.map(function () {
+                var f = $($(this).attr("href"));
+                if (f.length) return f
+            });
+        $(window).scroll(function () {
+            var f = $(this).scrollTop() + c,
+                g = e.map(function () {
+                    if ($(this).offset().top < f) return this
+                });
+            g = g[g.length - 1];
+            var h = g && g.length ? g[0].id : "";
+            a !== h && (a = h, d.parent().removeClass("on").end().filter("[href='#" + h + "']").parent().addClass("on"))
+        })
+    };
+
+    /*** 태그 클릭시 active ***/
+    $(".tag ul li").on("click",function(){
+        $(this).addClass("active");
     });
+
+
+
 </script>
 
 </html>
