@@ -1,10 +1,68 @@
 <!DOCTYPE html>
-<html lang="kr">
+<html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <title>유승범 포트폴리오</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- 제이쿼리 -->
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
+
 <body>
-    안녕
+    <div id="wrap">
+        <header>
+            <div class="container">
+                <nav>
+                    <ul class="navbar clearfix">
+                        <li class="on"><a href="#home">Home</a></li>
+                        <li><a href="#aboutme">About me</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section id="home">
+            <div class="container">
+                <p>Creative Yoo SeungBeom</p>
+                <p>PORTFOLIO <br> VOL.1</p>
+                <h1>BACK-END</h1>
+            </div>
+        </section>
+
+        <section id="aboutme">
+            <p>About me</p>
+        </section>
+
+        <section id="skills">
+            <p>Skills</p>
+        </section>
+
+        <section id="portfolio">
+            <p>Portfolio</p>
+        </section>
+
+        <section id="contact">
+            <p>Contact</p>
+        </section>
+    </div>
+
 </body>
+
+<script>
+    $(".navbar li a").on("click", function() {
+        $(".navbar li").removeClass();
+        $(this).parent().addClass("on");
+        
+    });
+
+
+</script>
+
 </html>
