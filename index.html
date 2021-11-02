@@ -10,6 +10,20 @@
 
     <!-- 제이쿼리 -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- 부트스트랩 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+        integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+        crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -20,9 +34,8 @@
                     <ul class="navbar clearfix">
                         <li class="on"><a href="#home">Home</a></li>
                         <li><a href="#aboutme">About me</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#training">Training </a></li>
+                        <li><a href="#project">Project</a></li>
                     </ul>
                 </nav>
             </div>
@@ -38,20 +51,23 @@
         <section id="aboutme">
             <div class="content_left">
                 <h2>About me</h2>
-                <img src="/assets/image/sky.jpg">
+                <img src="./assets/image/img.jpg">
                 <div class="about_bg"></div>
             </div>
 
             <div class="content_right">
                 <div class="profile">
                     <ul>
-                        <li>이름 : 유승범</li>
+                        <li> 이름 : 유승범</li>
                         <li> 나이 : 25세</li>
-                        <li> 주소지 : 서울특별시 마포구</li>
                         <li> 연락처 : 010-5012-2884</li>
                         <li> 이메일 : dbtmdqja207@naver.com</li>
                         <li> 수료 내역 : 2021.4 - 2021.10 강남 하이미디어 아카데미</li>
-                        <li>풀스택(프론트앤드&백앤드) 개발자 양성과정 수료 (6개월)</li>
+                        <li> 풀스택(프론트앤드&백앤드) 개발자 양성과정 수료 (6개월)</li>
+                        <li><a class="btn btn-success" href="https://maroban.tistory.com"
+                                style="margin-right: 10px; margin-top: 20px; color: #fff">Blog</a> <a
+                                class="btn btn-outline-dark" href="https://github.com/Maroban"
+                                style="margin-top: 20px;">Github</a></li>
                     </ul>
                 </div>
 
@@ -71,16 +87,74 @@
             </div>
         </section>
 
-        <section id="skills">
-            <p>Skills</p>
+        <section id="training">
+            <div class="content">
+                <img id="training1" src="./assets/image/training.png" alt="">
+                <img id="training2" src="./assets/image/training2.png" alt="">
+            </div>
         </section>
 
-        <section id="portfolio">
-            <p>Portfolio</p>
-        </section>
+        <section id="project">
+            <p>Project</p>
 
-        <section id="contact">
-            <p>Contact</p>
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <img src="./assets/image/buskeround1.png" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="./assets/image/buskeround2.png" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="./assets/image/buskeround3.png" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="./assets/image/buskeround4.png" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="./assets/image/buskeround5.png" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="./assets/image/buskeround6.png" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="./assets/image/buskeround7.png" class="d-block w-100">
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+                        class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span> <span
+                        class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="content">
+                <img src="./assets/image/buskeround logo.png" alt="">
+                <h2>소개</h2>
+                <p> 아티스트, 사용자, 제휴자가 이 사이트의 주 고객이 되는 타겟입니다.</p>
+                <p> 1. 아티스트는 <span>자신의 공연 위치와 타임라인, 갤러리 등</span> 사용자, 제휴자에게 알릴 수 있고,
+                    <br> 2. 사용자는 <span>현재 위치를 중심</span>으로 누가 공연하는지, 아티스트의 정보 등을 알 수 있습니다.
+                    <br> 3. 마지막으로 제휴자는 <span>자신의 건물을 무대 삼아 홍보</span>할 수 있는 사이트입니다.
+                </p>
+
+                <h2>Position</h2>
+                <p> - DB설계
+                    <br> - 회원가입 및 로그인
+                    <br> - 아티스트 랭킹
+                    <br> - 블로그 메인
+                    <br> - 블로그 공연 시작 (YouTube API)
+                    <br> - 블로그 타임라인 및 갤러리
+                </p>
+
+                <h3><a class="btn btn-outline-dark" href="https://github.com/thunderkyg/Buskeround">프로젝트 보기</a></h3>
+            </div>
+
         </section>
     </div>
 
